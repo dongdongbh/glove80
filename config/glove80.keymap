@@ -4146,6 +4146,16 @@ macros {
       , <&macro_release &mo 0 &kp RALT>
       ;
   )
+  screen_shot: screen_shot {
+              compatible = "zmk,behavior-macro";
+              #binding-cells = <0>;
+              bindings
+                  = <&macro_press &kp LALT &kp LCTRL &kp LSHFT>
+                  , <&macro_tap &kp PSCRN>
+                  , <&macro_release &kp LALT &kp LCTRL &kp LSHFT>
+                  ;
+          };
+
 
   //
   // Mod+Tab application switcher - hold this down to keep menu open
@@ -10911,7 +10921,7 @@ UNICODE_MORPH_MODS
  &kp _C(K)           &sk LSHFT           &kp _REDO           &kp _UNDO            &kp BSPC    &kp _CUT                                                                                                   &kp _CUT   &kp BSPC       &kp _UNDO       &kp _REDO  &sk LSHFT    &kp _C(K)
  &kp _C(L)  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD   &kp _COPY                                                                                                  &kp _COPY   &kp LEFT          &kp UP        &kp DOWN  &kp RIGHT    &kp _C(L)
  &kp _C(J)         &select_all        &select_line        &select_word           &kp _FIND  &kp _PASTE  &mod_tab _A_TAB  &mod_tab _G_TAB  &tog LAYER_Cursor  &select_none  &extend_line  &extend_word  &kp _PASTE   &kp HOME       &kp PG_UP       &kp PG_DN    &kp END    &kp _C(J)
- &kp _C(H)      &kp _FIND_PREV        &extend_line        &extend_word      &kp _FIND_NEXT                        &none    &mod_tab LCTL            &kp TAB   &select_all  &select_line  &select_word              &kp _FIND  &kp _FIND_PREV  &kp _FIND_NEXT  &kp _C(H)  &kp LG(DOT)
+ &kp _C(H)      &kp _FIND_PREV        &extend_line        &extend_word      &kp _FIND_NEXT                        &none    &mod_tab LCTL            &kp TAB   &select_all  &select_line  &select_word              &kp _FIND  &kp _FIND_PREV  &kp _FIND_NEXT  &screen_shot  &kp _C(H)
             >;
         };
 
