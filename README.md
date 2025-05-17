@@ -1,4 +1,4 @@
-# MoErgo Glove80 Custom Configuration for ZMK
+# MoErgo Glove80 Custom Configuration for ZMK 
 
 ![MoErgo Logo](moergo_logo.png)
 
