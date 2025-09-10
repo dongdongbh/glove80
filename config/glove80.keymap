@@ -747,7 +747,7 @@
 /* Custom Defined Behaviors */
 / {
 // NOTE: Use the many #define settings below to customize this keymap!
-//#define ENABLE_MOUSE_KEYS  // requires v24.12-beta or newer firmware
+#define ENABLE_MOUSE_KEYS  // requires v24.12-beta or newer firmware
 //#define NATURAL_SCROLLING  // supports "natural scrolling" in macOS
 #define OPERATING_SYSTEM 'L' // choose 'L'inux, 'M'acOS, or 'W'indows
 #define DIFFICULTY_LEVEL  0  // 0:custom, 1:easy -> 5:hard (see below)
@@ -10623,6 +10623,12 @@ UNICODE_MORPH_MODS
   //
   #include <input/processors.dtsi>
   &mmv_input_listener {
+    #ifdef LAYER_MouseFine
+    fine {
+      layers = <LAYER_MouseFine>;
+      input-processors = <&zip_xy_scaler MOUSE_SCALER_FINE>;
+    };
+    #endif
     #ifdef LAYER_MouseSlow
     slow {
       layers = <LAYER_MouseSlow>;
@@ -10649,7 +10655,7 @@ UNICODE_MORPH_MODS
   #include <zephyr/dt-bindings/input/input-event-codes.h>
   / {
     input_processors {
-      zip_scroll_scaler: zip_scroll_scaler {
+      zip_scroll_scaling_processor: zip_scroll_scaling_processor {
         compatible = "zmk,input-processor-scaler";
         #input-processor-cells = <2>;
         type = <INPUT_EV_REL>;
@@ -10659,22 +10665,28 @@ UNICODE_MORPH_MODS
     };
   };
   &msc_input_listener {
+    #ifdef LAYER_MouseFine
+    fine {
+      layers = <LAYER_MouseFine>;
+      input-processors = <&zip_scroll_scaling_processor MOUSE_SCALER_FINE>;
+    };
+    #endif
     #ifdef LAYER_MouseSlow
     slow {
       layers = <LAYER_MouseSlow>;
-      input-processors = <&zip_scroll_scaler MOUSE_SCALER_SLOW>;
+      input-processors = <&zip_scroll_scaling_processor MOUSE_SCALER_SLOW>;
     };
     #endif
     #ifdef LAYER_MouseFast
     fast {
       layers = <LAYER_MouseFast>;
-      input-processors = <&zip_scroll_scaler MOUSE_SCALER_FAST>;
+      input-processors = <&zip_scroll_scaling_processor MOUSE_SCALER_FAST>;
     };
     #endif
     #ifdef LAYER_MouseWarp
     warp {
       layers = <LAYER_MouseWarp>;
-      input-processors = <&zip_scroll_scaler MOUSE_SCALER_WARP>;
+      input-processors = <&zip_scroll_scaling_processor MOUSE_SCALER_WARP>;
     };
     #endif
   };
