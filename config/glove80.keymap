@@ -1655,12 +1655,12 @@ combos {
     layers = <0 1 2 3 4 5 6 7>;
   };
 
-  combo_caps_word_right {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T4 POS_RH_T5>;
-    bindings = <&caps_word>;
-    layers = <0 1 2 3 4 5 6 7>;
-  };
+  // combo_caps_word_right {
+  //   timeout-ms = <COMBO_FIRING_DECAY>;
+  //   key-positions = <POS_RH_T4 POS_RH_T5>;
+  //   bindings = <&caps_word>;
+  //   layers = <0 1 2 3 4 5 6 7>;
+  // };
 
   // T1+T5
 
