@@ -29,7 +29,7 @@ outer column (`C6`).
 
 | Row | C1 | C2 | C3 | C4 | C5 | C6 |
 | --- | --- | --- | --- | --- | --- | --- |
-| R2 | Agent `/agent` | Side `/side` | Raw `/raw` | Edit queue `Alt+Up` | Fast `/fast` | — |
+| R2 | Agent `/agent` | Side `/side` | Raw `/raw` | Edit queue `Alt+Up` | Fast `/fast` | Usage `/usage` |
 | R3 | Details `Ctrl+T` | Model `/model` | Effort+ `Alt+.` | Effort− `Alt+,` | Permissions `/permissions` | New `/new` |
 | R4 | Copy `Ctrl+O` | Accept `Y` | Next `Down` | Previous `Up` | Decline `N` | Status `/status` |
 | R5 | Editor `Ctrl+G` | Plan `/plan` | Review `/review` | Diff `/diff` | Compact `/compact` | Resume `/resume` |
@@ -45,7 +45,7 @@ index column (`C1`).  This mirrors the Codex action geometry.
 
 | Row | C6 | C5 | C4 | C3 | C2 | C1 |
 | --- | --- | --- | --- | --- | --- | --- |
-| R2 | — | Background `Ctrl+X Ctrl+B` | Stash `Ctrl+S` | Thinking `Alt+T` | BTW `/btw` | Agents `/agents` |
+| R2 | Usage `/usage` | Background `Ctrl+X Ctrl+B` | Stash `Ctrl+S` | Thinking `Alt+T` | BTW `/btw` | Agents `/agents` |
 | R3 | New `/clear` | Permissions `/permissions` | Effort− `Alt+P`, `Left` | Effort+ `Alt+P`, `Right` | Model `/model` | Details `Ctrl+O` |
 | R4 | Status `/status` | Decline `N` | Previous `Up` | Next `Down` | Accept `Y` | Copy `/copy` |
 | R5 | Resume `/resume` | Compact `/compact` | Diff `/diff` | Review `/review` | Plan `/plan` | Editor `Ctrl+G` |
@@ -68,4 +68,6 @@ frequent navigation and decisions stay on the home row, positive/forward
 actions roll inward to stronger fingers, inspect/copy/editor form an inner
 index-finger rake, session administration moves outward, and prompt/approval
 lifecycle actions occupy the natural thumb arcs.  Stop is separated from
-Accept by Decline to reduce accidental interruption.
+Accept by Decline to reduce accidental interruption.  Usage occupies `C6R2`
+above New, Status, and Resume, completing the mirrored outer-column session
+administration rake without displacing a stronger-finger control.

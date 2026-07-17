@@ -4024,6 +4024,12 @@ macros {
     bindings = <&macro_tap AI_COMPOSER_PREFIX &kp FSLH &kp S &kp T &kp A &kp T &kp U &kp S &kp ENTER>;
   )
 
+  ZMK_MACRO(ai_usage,
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings = <&macro_tap AI_COMPOSER_PREFIX &kp FSLH &kp U &kp S &kp A &kp G &kp E &kp ENTER>;
+  )
+
   ZMK_MACRO(ai_resume,
     wait-ms = <15>;
     tap-ms = <15>;
@@ -10865,7 +10871,7 @@ macros {
         layer_AI_Codex {
             bindings = <
  &none  &none  &none  &none  &none                                                                                         &none              &none               &none              &none              &none
- &none  &none  &none  &none  &none  &none                                                                  &ai_codex_agent  &ai_codex_side      &ai_codex_raw  &kp LA(UP)    &ai_codex_fast  &none
+ &none  &none  &none  &none  &none  &none                                                                  &ai_codex_agent  &ai_codex_side      &ai_codex_raw  &kp LA(UP)    &ai_codex_fast  &ai_usage
  &none  &none  &none  &none  &none  &none                                                                      &kp LC(T)       &ai_model       &kp LA(DOT)   &kp LA(COMMA)  &ai_permissions  &ai_codex_new
  &none  &none  &none  &none  &none  &none                                                                      &kp LC(O)          &kp Y           &kp DOWN          &kp UP             &kp N    &ai_status
  &none  &none  &none  &none  &none  &none  &none  &none  &none  &kp TAB  &kp LC(J)  &kp ENTER  &kp LC(G)       &ai_plan        &ai_review        &ai_diff       &ai_compact  &ai_resume
@@ -10964,7 +10970,7 @@ macros {
         layer_AI_Claude {
             bindings = <
               &none                 &none             &none                  &none             &none                                                                                  &none  &none  &none  &none  &none
-              &none  &ai_claude_background        &kp LC(S)             &kp LA(T)   &ai_claude_btw  &ai_claude_agents                                    &none  &none  &none  &none  &none  &none
+         &ai_usage  &ai_claude_background        &kp LC(S)             &kp LA(T)   &ai_claude_btw  &ai_claude_agents                                    &none  &none  &none  &none  &none  &none
     &ai_claude_new      &ai_permissions  &ai_claude_effort_down  &ai_claude_effort_up       &ai_model          &kp LC(O)                                    &none  &none  &none  &none  &none  &none
         &ai_status                 &kp N            &kp UP              &kp DOWN          &kp Y   &ai_claude_copy                                    &none  &none  &none  &none  &none  &none
         &ai_resume           &ai_compact          &ai_diff            &ai_review       &ai_plan          &kp LC(G)  &kp ENTER  &kp LC(J)  &ai_claude_background  &none  &none  &none  &none  &none  &none  &none  &none  &none
