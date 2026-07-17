@@ -38,6 +38,8 @@ Your keyboard is now ready to use.
 
 ## Custom features
 
+[![Glove80 Codex and Claude AI control layer keymap](docs/ai-control-layers.png)](docs/ai-control-layers.md)
+
 - [Zero-config Codex and Claude control layers](docs/ai-control-layers.md) use
   momentary cross-hand controls while preserving the standard CLI shortcuts
   for every other keyboard.
