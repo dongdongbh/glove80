@@ -75,7 +75,7 @@
 #define LAYER_RightMiddy 11
 #define LAYER_RightRingy 12
 #define LAYER_RightPinky 13
-#define LAYER_Gaming 14
+#define LAYER_AI_CODEX 14
 #define LAYER_Cursor 15
 #define LAYER_Number 16
 #define LAYER_Function 17
@@ -84,7 +84,7 @@
 #define LAYER_Mouse 20
 #define LAYER_System 21
 #define LAYER_macOS_right 22
-#define LAYER_Emoji 23
+#define LAYER_AI_CLAUDE 23
 #define LAYER_World 24
 #define LAYER_Factory 25
 #define LAYER_Lower 26
@@ -424,20 +424,6 @@
       };
       #endif
 
-      #ifdef LAYER_Emoji
-      Emoji {
-        bindings = <
-          ___ ___ ___ ___ ___                                             CYN ___ ___ CYN ___
-          ___ ___ ___ ___ ___ ___                                     ___ CYN ___ ___ CYN ___
-          ___ ___ ___ ___ ___ ___                                     ___ ___ ___ ___ ___ ___
-          ___ GDN PNK SPG AZU ___                                     CYN ___ ___ ___ ___ CYN
-          ___ ___ ___ ___ ___ ___     ___ ___ ___     ___ ___ ___     ___ CYN ___ ___ CYN ___
-          ___ ___ ___ ___ RED         YLW ___ ___     ___ ___ ___         ___ CYN CYN ___ ___
-        >;
-        layer-id = <LAYER_Emoji>;
-      };
-      #endif
-
       #ifdef LAYER_Symbol
       Symbol {
         bindings = <
@@ -547,20 +533,6 @@
           ___ ___ ___ ___ ___         ___ ___ ___     ___ ___ ___         RED ___ ___ ___ ___
         >;
         layer-id = <LAYER_Typing>;
-      };
-      #endif
-
-      #ifdef LAYER_Gaming
-      Gaming {
-        bindings = <
-          ORN ___ ___ ___ COR                                             TEA TEA TEA TEA TEA
-          ___ GDN GDN GDN GDN GDN                                     TEA TEA TEA TEA TEA TEA
-          ___ GDN GDN GDN GDN GDN                                     ___ ___ ___ ___ ___ TEA
-          ___ COR ___ AZU ___ ___                                     ___ ___ ___ ___ ___ ___
-          ___ YLW AZU AZU AZU RED     YLW CYN ___     ORN AZU COR     ___ ___ ___ ___ ___ ___
-          ___ GRN ___ ___ RED         COR GRN COR     AZU AZU AZU         ___ ___ ___ ___ ___
-        >;
-        layer-id = <LAYER_Gaming>;
       };
       #endif
 
@@ -887,6 +859,7 @@
 #define ENABLE_MOUSE_KEYS    // requires HID_POINTING override to "y"
 #define ENFORCE_BILATERAL    // cancels single-handed home row mod+tap
 #define SPACE_FORGIVENESS  // allow lingering taps on the space bar
+#define AI_VIM_COMPOSER    // normalize slash macros from Vim normal/insert mode
 //#define THUMB_FORGIVENESS  // allow lingering taps on the thumb keys
 //#define SHIFT_FORGIVENESS  // requires v24.08-beta or newer firmware
 //#define NATURAL_SCROLLING  // supports "natural scrolling" in macOS
@@ -1044,7 +1017,7 @@
   #define KEY_LH_C4R6 LPAR
   #define KEY_LH_C3R6 RPAR
   #define KEY_LH_C2R6 LSFT
-  #define LAY_LH_C2R6 LAYER_Emoji
+  #define LAY_LH_C2R6 LAYER_AI_CODEX
   #define KEY_LH_T4 SPACE
   #define LAY_LH_T4 LAYER_Cursor
   #define KEY_LH_T5 TAB
@@ -1056,7 +1029,7 @@
   #define KEY_RH_T4 R
   #define LAY_RH_T4 LAYER_Symbol
   #define KEY_RH_C2R6 RSFT
-  #define LAY_RH_C2R6 LAYER_World
+  #define LAY_RH_C2R6 LAYER_AI_CLAUDE
   #define KEY_RH_C3R6 LBKT
   #define KEY_RH_C4R6 RBKT
   #define KEY_RH_C5R6 GRAVE
@@ -1136,7 +1109,7 @@
   #define KEY_LH_C4R6 LPAR
   #define KEY_LH_C3R6 RPAR
   #define KEY_LH_C2R6 LSFT
-  #define LAY_LH_C2R6 LAYER_Emoji
+  #define LAY_LH_C2R6 LAYER_AI_CODEX
   #define KEY_LH_T4 BACKSPACE
   #define LAY_LH_T4 LAYER_Cursor
   #define KEY_LH_T5 DELETE
@@ -1148,7 +1121,7 @@
   #define KEY_RH_T4 SPACE
   #define LAY_RH_T4 LAYER_Symbol
   #define KEY_RH_C2R6 RSFT
-  #define LAY_RH_C2R6 LAYER_World
+  #define LAY_RH_C2R6 LAYER_AI_CLAUDE
   #define KEY_RH_C3R6 LBKT
   #define KEY_RH_C4R6 RBKT
   #define KEY_RH_C5R6 GRAVE
@@ -1228,7 +1201,7 @@
   #define KEY_LH_C4R6 LPAR
   #define KEY_LH_C3R6 RPAR
   #define KEY_LH_C2R6 LSFT
-  #define LAY_LH_C2R6 LAYER_Emoji
+  #define LAY_LH_C2R6 LAYER_AI_CODEX
   #define KEY_LH_T4 BACKSPACE
   #define LAY_LH_T4 LAYER_Cursor
   #define KEY_LH_T5 DELETE
@@ -1240,7 +1213,7 @@
   #define KEY_RH_T4 SPACE
   #define LAY_RH_T4 LAYER_Symbol
   #define KEY_RH_C2R6 RSFT
-  #define LAY_RH_C2R6 LAYER_World
+  #define LAY_RH_C2R6 LAYER_AI_CLAUDE
   #define KEY_RH_C3R6 LBKT
   #define KEY_RH_C4R6 RBKT
   #define KEY_RH_C5R6 GRAVE
@@ -1320,7 +1293,7 @@
   #define KEY_LH_C4R6 LPAR
   #define KEY_LH_C3R6 RPAR
   #define KEY_LH_C2R6 LSFT
-  #define LAY_LH_C2R6 LAYER_Emoji
+  #define LAY_LH_C2R6 LAYER_AI_CODEX
   #define KEY_LH_T4 BACKSPACE
   #define LAY_LH_T4 LAYER_Cursor
   #define KEY_LH_T5 DELETE
@@ -1332,7 +1305,7 @@
   #define KEY_RH_T4 SPACE
   #define LAY_RH_T4 LAYER_Symbol
   #define KEY_RH_C2R6 RSFT
-  #define LAY_RH_C2R6 LAYER_World
+  #define LAY_RH_C2R6 LAYER_AI_CLAUDE
   #define KEY_RH_C3R6 LBKT
   #define KEY_RH_C4R6 RBKT
   #define KEY_RH_C5R6 GRAVE
@@ -1643,14 +1616,6 @@ combos {
   #endif
 
   // C1R5+C2R6
-  #ifdef LAYER_Gaming
-  combo_gaming_layer_toggle {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_C1R5 POS_LH_C2R6>;
-    bindings = <&tog LAYER_Gaming>;
-    layers = <0 LAYER_macOS LAYER_Gaming>;
-  };
-  #endif
   #ifdef LAYER_Typing
   combo_typing_layer_toggle {
     timeout-ms = <COMBO_FIRING_DECAY>;
@@ -3873,9 +3838,21 @@ behaviors {
     retro-tap; // tap on standalone hold
     #endif
   };
-  stumb: thumb_layer_access_sticky_key_oneshot {
+  ai_left_trigger: ai_left_cross_hand_layer_shift {
     compatible = "zmk,behavior-hold-tap";
     flavor = THUMB_HOLDING_TYPE;
+    hold-trigger-key-positions = <RIGHT_HAND_KEYS>;
+    hold-trigger-on-release;
+    tapping-term-ms = <THUMB_HOLDING_TIME>;
+    quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+    #binding-cells = <2>;
+    bindings = <&mo>, <&sticky_key_oneshot>;
+  };
+  ai_right_trigger: ai_right_cross_hand_layer_shift {
+    compatible = "zmk,behavior-hold-tap";
+    flavor = THUMB_HOLDING_TYPE;
+    hold-trigger-key-positions = <LEFT_HAND_KEYS>;
+    hold-trigger-on-release;
     tapping-term-ms = <THUMB_HOLDING_TIME>;
     quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
     #binding-cells = <2>;
@@ -4010,6 +3987,138 @@ behaviors {
 };
 
 macros {
+
+  //
+  // Zero-config AI controls.  These only emit each CLI's native shortcuts or
+  // type built-in slash commands; they do not require host-side key remapping.
+  // AI_VIM_COMPOSER opts into ESC then I normalization before slash commands;
+  // without that build setting, commands begin directly with slash.
+  //
+#ifdef AI_VIM_COMPOSER
+#define AI_COMPOSER_PREFIX &kp ESC &kp I
+#else
+#define AI_COMPOSER_PREFIX
+#endif
+
+  ZMK_MACRO(ai_codex_new,
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings = <&macro_tap AI_COMPOSER_PREFIX &kp FSLH &kp N &kp E &kp W &kp ENTER>;
+  )
+
+  ZMK_MACRO(ai_claude_new,
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings = <&macro_tap AI_COMPOSER_PREFIX &kp FSLH &kp C &kp L &kp E &kp A &kp R &kp ENTER>;
+  )
+
+  ZMK_MACRO(ai_permissions,
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings = <&macro_tap AI_COMPOSER_PREFIX &kp FSLH &kp P &kp E &kp R &kp M &kp I &kp S &kp S &kp I &kp O &kp N &kp S &kp ENTER>;
+  )
+
+  ZMK_MACRO(ai_status,
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings = <&macro_tap AI_COMPOSER_PREFIX &kp FSLH &kp S &kp T &kp A &kp T &kp U &kp S &kp ENTER>;
+  )
+
+  ZMK_MACRO(ai_resume,
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings = <&macro_tap AI_COMPOSER_PREFIX &kp FSLH &kp R &kp E &kp S &kp U &kp M &kp E &kp ENTER>;
+  )
+
+  ZMK_MACRO(ai_compact,
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings = <&macro_tap AI_COMPOSER_PREFIX &kp FSLH &kp C &kp O &kp M &kp P &kp A &kp C &kp T &kp ENTER>;
+  )
+
+  ZMK_MACRO(ai_diff,
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings = <&macro_tap AI_COMPOSER_PREFIX &kp FSLH &kp D &kp I &kp F &kp F &kp ENTER>;
+  )
+
+  ZMK_MACRO(ai_review,
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings = <&macro_tap AI_COMPOSER_PREFIX &kp FSLH &kp R &kp E &kp V &kp I &kp E &kp W &kp ENTER>;
+  )
+
+  ZMK_MACRO(ai_plan,
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings = <&macro_tap AI_COMPOSER_PREFIX &kp FSLH &kp P &kp L &kp A &kp N &kp ENTER>;
+  )
+
+  ZMK_MACRO(ai_model,
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings = <&macro_tap AI_COMPOSER_PREFIX &kp FSLH &kp M &kp O &kp D &kp E &kp L &kp ENTER>;
+  )
+
+  ZMK_MACRO(ai_codex_agent,
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings = <&macro_tap AI_COMPOSER_PREFIX &kp FSLH &kp A &kp G &kp E &kp N &kp T &kp ENTER>;
+  )
+
+  ZMK_MACRO(ai_codex_side,
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings = <&macro_tap AI_COMPOSER_PREFIX &kp FSLH &kp S &kp I &kp D &kp E &kp ENTER>;
+  )
+
+  ZMK_MACRO(ai_codex_raw,
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings = <&macro_tap AI_COMPOSER_PREFIX &kp FSLH &kp R &kp A &kp W &kp ENTER>;
+  )
+
+  ZMK_MACRO(ai_codex_fast,
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings = <&macro_tap AI_COMPOSER_PREFIX &kp FSLH &kp F &kp A &kp S &kp T &kp ENTER>;
+  )
+
+  ZMK_MACRO(ai_claude_agents,
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings = <&macro_tap AI_COMPOSER_PREFIX &kp FSLH &kp A &kp G &kp E &kp N &kp T &kp S &kp ENTER>;
+  )
+
+  ZMK_MACRO(ai_claude_btw,
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings = <&macro_tap AI_COMPOSER_PREFIX &kp FSLH &kp B &kp T &kp W &kp ENTER>;
+  )
+
+  ZMK_MACRO(ai_claude_copy,
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings = <&macro_tap AI_COMPOSER_PREFIX &kp FSLH &kp C &kp O &kp P &kp Y &kp ENTER>;
+  )
+
+  ZMK_MACRO(ai_claude_background,
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings = <&macro_tap &kp LC(X) &kp LC(B)>;
+  )
+
+  ZMK_MACRO(ai_claude_effort_down,
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings = <&macro_tap &kp LA(P) &kp LEFT>;
+  )
+
+  ZMK_MACRO(ai_claude_effort_up,
+    wait-ms = <15>;
+    tap-ms = <15>;
+    bindings = <&macro_tap &kp LA(P) &kp RIGHT>;
+  )
 
   ZMK_MACRO(dot_dot,
     wait-ms = <0>;
@@ -10606,7 +10715,7 @@ macros {
                         &none                          &kp Q                          &kp Y                          &kp O                          &kp U  &kp EQUAL                                                                                                                                          &kp X                           &kp L                           &kp D                           &kp P                           &kp Z                         &none
                         &kp B  &LeftPinky (C, LAYER_Enthium)  &LeftRingy (I, LAYER_Enthium)  &LeftMiddy (A, LAYER_Enthium)  &LeftIndex (E, LAYER_Enthium)  &kp MINUS                                                                                                                                          &kp K  &RightIndex (H, LAYER_Enthium)  &RightMiddy (T, LAYER_Enthium)  &RightRingy (N, LAYER_Enthium)  &RightPinky (S, LAYER_Enthium)                         &kp W
  &sticky_key_modtap LSFT LSFT                        &kp SQT                      &kp COMMA                        &kp DOT                       &kp SEMI   &kp FSLH  &thumb LAYER_Function ESC  &thumb LAYER_Lower INSERT  &kp PG_UP    &thums_up     &thumb LAYER_Lower DELETE  &thumb LAYER_System ENTER   &kp J                           &kp M                           &kp G                           &kp F                           &kp V  &sticky_key_modtap RSFT RSFT
-         &magic LAYER_Magic 0                       &kp BSLH                   &parang_left                  &parang_right        &stumb LAYER_Emoji LSFT             &thumb LAYER_Cursor SPACE    &thumb LAYER_Number TAB  &kp PG_DN  &thums_down  &thumb LAYER_Mouse BACKSPACE      &space LAYER_Symbol R                 &stumb LAYER_World RSFT                        &kp LBKT                        &kp RBKT                       &kp GRAVE          &magic LAYER_Magic 0
+         &magic LAYER_Magic 0                       &kp BSLH                   &parang_left                  &parang_right  &ai_left_trigger LAYER_AI_CODEX LSFT             &thumb LAYER_Cursor SPACE    &thumb LAYER_Number TAB  &kp PG_DN  &thums_down  &thumb LAYER_Mouse BACKSPACE      &space LAYER_Symbol R  &ai_right_trigger LAYER_AI_CLAUDE RSFT                        &kp LBKT                        &kp RBKT                       &kp GRAVE          &magic LAYER_Magic 0
             >;
         };
 
@@ -10617,7 +10726,7 @@ macros {
                         &none                       &kp SQT                     &kp COMMA                       &kp DOT                         &kp P   &kp Y                                                                                                                                            &kp F                          &kp G                          &kp C                          &kp R                          &kp L                     &kp SLASH
                     &kp EQUAL  &LeftPinky (A, LAYER_Dvorak)  &LeftRingy (O, LAYER_Dvorak)  &LeftMiddy (E, LAYER_Dvorak)  &LeftIndex (U, LAYER_Dvorak)   &kp I                                                                                                                                            &kp D  &RightIndex (H, LAYER_Dvorak)  &RightMiddy (T, LAYER_Dvorak)  &RightRingy (N, LAYER_Dvorak)  &RightPinky (S, LAYER_Dvorak)                     &kp MINUS
  &sticky_key_modtap LSFT LSFT                      &kp SEMI                         &kp Q                         &kp J                         &kp K   &kp X      &thumb LAYER_Function ESC             &mo LAYER_Lower  &kp PG_UP    &thums_up  &thumb LAYER_Lower INSERT  &thumb LAYER_System ENTER   &kp B                          &kp M                          &kp W                          &kp V                          &kp Z  &sticky_key_modtap RSFT RSFT
-         &magic LAYER_Magic 0                      &kp BSLH                  &parang_left                 &parang_right       &stumb LAYER_Emoji LSFT          &thumb LAYER_Cursor BACKSPACE  &thumb LAYER_Number DELETE  &kp PG_DN  &thums_down     &thumb LAYER_Mouse TAB  &space LAYER_Symbol SPACE                &stumb LAYER_World RSFT                       &kp LBKT                       &kp RBKT                      &kp GRAVE          &magic LAYER_Magic 0
+         &magic LAYER_Magic 0                      &kp BSLH                  &parang_left                 &parang_right  &ai_left_trigger LAYER_AI_CODEX LSFT          &thumb LAYER_Cursor BACKSPACE  &thumb LAYER_Number DELETE  &kp PG_DN  &thums_down     &thumb LAYER_Mouse TAB  &space LAYER_Symbol SPACE  &ai_right_trigger LAYER_AI_CLAUDE RSFT                       &kp LBKT                       &kp RBKT                      &kp GRAVE          &magic LAYER_Magic 0
             >;
         };
 
@@ -10628,7 +10737,7 @@ macros {
                         &none                          &kp Q                          &kp W                          &kp F                          &kp P   &kp G                                                                                                                                            &kp J                           &kp L                           &kp U                           &kp Y                        &kp SEMI                     &kp MINUS
                     &kp EQUAL  &LeftPinky (A, LAYER_Colemak)  &LeftRingy (R, LAYER_Colemak)  &LeftMiddy (S, LAYER_Colemak)  &LeftIndex (T, LAYER_Colemak)   &kp D                                                                                                                                            &kp H  &RightIndex (N, LAYER_Colemak)  &RightMiddy (E, LAYER_Colemak)  &RightRingy (I, LAYER_Colemak)  &RightPinky (O, LAYER_Colemak)                       &kp SQT
  &sticky_key_modtap LSFT LSFT                          &kp Z                          &kp X                          &kp C                          &kp V   &kp B      &thumb LAYER_Function ESC             &mo LAYER_Lower  &kp PG_UP    &thums_up  &thumb LAYER_Lower INSERT  &thumb LAYER_System ENTER   &kp K                           &kp M                       &kp COMMA                         &kp DOT                        &kp FSLH  &sticky_key_modtap RSFT RSFT
-         &magic LAYER_Magic 0                       &kp BSLH                   &parang_left                  &parang_right        &stumb LAYER_Emoji LSFT          &thumb LAYER_Cursor BACKSPACE  &thumb LAYER_Number DELETE  &kp PG_DN  &thums_down     &thumb LAYER_Mouse TAB  &space LAYER_Symbol SPACE                 &stumb LAYER_World RSFT                        &kp LBKT                        &kp RBKT                       &kp GRAVE          &magic LAYER_Magic 0
+         &magic LAYER_Magic 0                       &kp BSLH                   &parang_left                  &parang_right  &ai_left_trigger LAYER_AI_CODEX LSFT          &thumb LAYER_Cursor BACKSPACE  &thumb LAYER_Number DELETE  &kp PG_DN  &thums_down     &thumb LAYER_Mouse TAB  &space LAYER_Symbol SPACE  &ai_right_trigger LAYER_AI_CLAUDE RSFT                        &kp LBKT                        &kp RBKT                       &kp GRAVE          &magic LAYER_Magic 0
             >;
         };
 
@@ -10639,7 +10748,7 @@ macros {
                         &none                         &kp Q                         &kp W                         &kp E                         &kp R   &kp T                                                                                                                                            &kp Y                          &kp U                          &kp I                          &kp O                             &kp P                     &kp MINUS
                     &kp EQUAL  &LeftPinky (A, LAYER_QWERTY)  &LeftRingy (S, LAYER_QWERTY)  &LeftMiddy (D, LAYER_QWERTY)  &LeftIndex (F, LAYER_QWERTY)   &kp G                                                                                                                                            &kp H  &RightIndex (J, LAYER_QWERTY)  &RightMiddy (K, LAYER_QWERTY)  &RightRingy (L, LAYER_QWERTY)  &RightPinky (SEMI, LAYER_QWERTY)                       &kp SQT
  &sticky_key_modtap LSFT LSFT                         &kp Z                         &kp X                         &kp C                         &kp V   &kp B      &thumb LAYER_Function ESC             &mo LAYER_Lower  &kp PG_UP    &thums_up  &thumb LAYER_Lower INSERT  &thumb LAYER_System ENTER   &kp N                          &kp M                      &kp COMMA                        &kp DOT                          &kp FSLH  &sticky_key_modtap RSFT RSFT
-         &magic LAYER_Magic 0                      &kp BSLH                  &parang_left                 &parang_right       &stumb LAYER_Emoji LSFT          &thumb LAYER_Cursor BACKSPACE  &thumb LAYER_Number DELETE  &kp PG_DN  &thums_down     &thumb LAYER_Mouse TAB  &space LAYER_Symbol SPACE                &stumb LAYER_World RSFT                       &kp LBKT                       &kp RBKT                         &kp GRAVE          &magic LAYER_Magic 0
+         &magic LAYER_Magic 0                      &kp BSLH                  &parang_left                 &parang_right  &ai_left_trigger LAYER_AI_CODEX LSFT          &thumb LAYER_Cursor BACKSPACE  &thumb LAYER_Number DELETE  &kp PG_DN  &thums_down     &thumb LAYER_Mouse TAB  &space LAYER_Symbol SPACE  &ai_right_trigger LAYER_AI_CLAUDE RSFT                       &kp LBKT                       &kp RBKT                         &kp GRAVE          &magic LAYER_Magic 0
             >;
         };
 
@@ -10753,14 +10862,14 @@ macros {
             >;
         };
 
-        layer_Gaming {
+        layer_AI_Codex {
             bindings = <
- &kp ESC      &kp P   &kp O   &kp N  &kp BSPC                                                                                   &kp F1     &kp F2    &kp F3     &kp F4     &kp F5
-   &kp M     &kp N6  &kp N7  &kp N8    &kp N9  &kp N0                                                                &kp F6     &kp F7     &kp F8    &kp F9    &kp F10    &kp F11
-   &kp I     &kp N1  &kp N2  &kp N3    &kp N4  &kp N5                                                                 &kp Y      &kp U      &kp I     &kp O      &kp P    &kp F12
-   &kp T    &kp TAB   &kp Q   &kp W     &kp E   &kp R                                                                 &kp H      &kp J      &kp K     &kp L   &kp SEMI    &kp SQT
-   &kp G  &kp LSHFT   &kp A   &kp S     &kp D   &kp F  &kp LSHFT   &kp LALT    &kp V   &kp ESC    &kp UP    &kp RET   &kp N      &kp M  &kp COMMA   &kp DOT   &kp FSLH   &kp BSLH
-   &kp B  &kp LCTRL   &kp Z   &kp X     &kp C          &kp SPACE  &kp LCTRL  &kp RET  &kp LEFT  &kp DOWN  &kp RIGHT          &kp MINUS   &kp LBKT  &kp RBKT  &kp EQUAL  &kp GRAVE
+ &none  &none  &none  &none  &none                                                                                         &none              &none               &none              &none              &none
+ &none  &none  &none  &none  &none  &none                                                                  &ai_codex_agent  &ai_codex_side      &ai_codex_raw  &kp LA(UP)    &ai_codex_fast  &none
+ &none  &none  &none  &none  &none  &none                                                                      &kp LC(T)       &ai_model       &kp LA(DOT)   &kp LA(COMMA)  &ai_permissions  &ai_codex_new
+ &none  &none  &none  &none  &none  &none                                                                      &kp LC(O)          &kp Y           &kp DOWN          &kp UP             &kp N    &ai_status
+ &none  &none  &none  &none  &none  &none  &none  &none  &none  &kp TAB  &kp LC(J)  &kp ENTER  &kp LC(G)       &ai_plan        &ai_review        &ai_diff       &ai_compact  &ai_resume
+ &none  &none  &none  &none  &trans        &none  &none  &none  &kp ESC      &kp N      &kp Y              &trans          &none             &none            &none        &none
             >;
         };
 
@@ -10852,14 +10961,14 @@ macros {
             >;
         };
 
-        layer_Emoji {
+        layer_AI_Claude {
             bindings = <
-     &emoji_cloudy      &emoji_mostly_cloudy           &emoji_partly_cloudy        &emoji_mostly_sunny                  &emoji_sunny                                                                                                                                                                                                      &emoji_new_moon      &emoji_moon_crescent         &emoji_moon_quarter         &emoji_moon_gibbous        &emoji_full_moon
-   &emoji_rainbow     &emoji_light_skin_tone  &emoji_medium_light_skin_tone    &emoji_medium_skin_tone  &emoji_medium_dark_skin_tone  &emoji_dark_skin_tone                                                                                                                                                &emoji_theme_party           &emoji_theme_love       &emoji_theme_nature       &emoji_theme_strength         &emoji_theme_effort    &emoji_theme_science
- &emoji_left_arrow               &emoji_bald                &emoji_red_hair          &emoji_curly_hair             &emoji_white_hair     &emoji_right_arrow                                                                                                                                                 &emoji_face_laugh           &emoji_face_smile          &emoji_face_eyes            &emoji_face_joke            &emoji_face_fear    &emoji_face_surprise
-  &emoji_male_sign  &emoji_hair_style_preset        &emoji_skin_tone_preset  &emoji_gender_sign_preset                     &sk LSHFT     &emoji_female_sign                                                                                                                                          &emoji_gesture_attention     &emoji_gesture_approval  &emoji_gesture_gratitude      &emoji_gesture_anxiety      &emoji_gesture_despair  &emoji_gesture_curious
-    &emoji_old_man                &emoji_man                     &emoji_boy                &emoji_girl                  &emoji_woman       &emoji_old_woman  &emoji_cityscape  &emoji_cityscape_dusk    &emoji_cityscape_night    &emoji_theme_magic    &emoji_theme_space   &emoji_theme_awesome  &emoji_person_tipping_hand  &emoji_person_gesturing_ok      &emoji_person_bowing  &emoji_person_raising_hand  &emoji_person_gesturing_no       &emoji_theme_sigh
- &emoji_theme_game        &emoji_theme_trend                    &emoji_baby         &emoji_baby_bottle              &tog LAYER_Emoji                               &emoji_zwj         &emoji_sunrise  &emoji_sunrise_mountains  &emoji_gesture_hands  &emoji_gesture_point  &emoji_gesture_thumbs                                            &emoji_check                &emoji_100              &emoji_warning                &emoji_cross         &emoji_question
+              &none                 &none             &none                  &none             &none                                                                                  &none  &none  &none  &none  &none
+              &none  &ai_claude_background        &kp LC(S)             &kp LA(T)   &ai_claude_btw  &ai_claude_agents                                    &none  &none  &none  &none  &none  &none
+    &ai_claude_new      &ai_permissions  &ai_claude_effort_down  &ai_claude_effort_up       &ai_model          &kp LC(O)                                    &none  &none  &none  &none  &none  &none
+        &ai_status                 &kp N            &kp UP              &kp DOWN          &kp Y   &ai_claude_copy                                    &none  &none  &none  &none  &none  &none
+        &ai_resume           &ai_compact          &ai_diff            &ai_review       &ai_plan          &kp LC(G)  &kp ENTER  &kp LC(J)  &ai_claude_background  &none  &none  &none  &none  &none  &none  &none  &none  &none
+              &none                 &none             &none                  &none           &trans                  &kp Y      &kp N              &kp LC(C)  &none  &none  &none       &trans  &none  &none  &none  &none
             >;
         };
 
@@ -10892,7 +11001,7 @@ macros {
   &none           &kp KP_N1           &kp KP_N2           &kp KP_N3           &kp KP_N4     &kp KP_N5                                                                                                         &kp KP_N6            &kp KP_N7            &kp KP_N8            &kp KP_N9            &kp KP_N0   &none
   &none  &sk LEFT_PINKY_MOD  &sk LEFT_RINGY_MOD  &sk LEFT_MIDDY_MOD  &sk LEFT_INDEX_MOD  &kp KP_MINUS                                                                                                      &kp KP_SLASH  &sk RIGHT_INDEX_MOD  &sk RIGHT_MIDDY_MOD  &sk RIGHT_RINGY_MOD  &sk RIGHT_PINKY_MOD   &none
   &none         &kp KP_LPAR        &kp KP_COMMA          &kp KP_DOT         &kp KP_RPAR   &kp KP_PLUS  &tog LAYER_Function              &none  &kp RALT  &kp RALT             &none  &tog LAYER_System  &kp KP_MULTIPLY           &kp KP_NUM         &kp KP_CLEAR         &kp KP_EQUAL         &kp KP_ENTER   &none
-  &none               &none               &none               &none    &tog LAYER_Emoji                  &tog LAYER_Cursor  &tog LAYER_Number     &none     &none  &tog LAYER_Mouse  &tog LAYER_Symbol                      &tog LAYER_World                &none                &none                &none   &none
+  &none               &none               &none               &none               &none                  &tog LAYER_Cursor  &tog LAYER_Number     &none     &none  &tog LAYER_Mouse  &tog LAYER_Symbol                      &tog LAYER_World                &none                &none                &none   &none
             >;
         };
 

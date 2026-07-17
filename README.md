@@ -35,3 +35,11 @@ To locate your firmware files and reflash your Glove80...
 6. Flash the firmware to Glove80 according to the user documentation on the official Glove80 Glove80 Support website (linked above)
 
 Your keyboard is now ready to use.
+
+## Custom features
+
+- [Zero-config Codex and Claude control layers](docs/ai-control-layers.md) use
+  momentary cross-hand controls while preserving the standard CLI shortcuts
+  for every other keyboard.
+- The build workflow explicitly matches every pushed branch. Its `ref: main`
+  setting selects upstream MoErgo ZMK, not the configuration branch being built.
